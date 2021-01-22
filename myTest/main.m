@@ -1,20 +1,18 @@
 //
 //  main.m
-//  macProject
+//  myTest
 //
-//  Created by wy on 2021/1/22.
+//  Created by smile on 2018/12/21.
 //
 
 #import <Foundation/Foundation.h>
 #import <malloc/malloc.h>
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-      
-		char *p = calloc(1, 20);
-		
-		NSLog(@"p的大小：%zd", malloc_size(p));
-		
+		char *m;
+		m = (char *)(malloc(24)); //动态分配24个字节
+		NSLog(@"所占大小%lu",malloc_size(m));
     }
     return 0;
 }
